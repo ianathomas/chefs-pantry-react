@@ -2,10 +2,55 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-image: linear-gradient(to right,
+  rgb(255,255,255,1),
+  rgb(255,255,255,.9),
+  rgb(255,255,255,.5),
+  rgb(255,255,255,0)),
+  url("https://cdn.apartmenttherapy.info/image/upload/v1565382249/stock/rustic-vegan-unsplash-kitchen.jpg");
+  background-size: cover;
+ }
+
 h1 {
   font-size: larger;
 }
 
-h2 {
-  font-size: medium;
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  background-color: #e3f2fd;
+}
+
+.navbar-brand {
+  color: white
+}
+
+.container-fluid {
+  box-shadow: 5px 5px 5px lightblue;
+}
+
+a.nav-link:hover, a.nav-link:active {
+  font-size: 125%;
+  box-shadow: 5px 3px 5px lightblue;
+}
+
+#root {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.info-button {
+  font-size: small;
+}
+
+button {
+  background-color: #e3f2fd;
+  box-shadow: 5px 3px 5px lightblue;
+}
+
+button:hover, button:active {
+  font-size: 125%;
+  box-shadow: 5px 3px 5px lightblue;
 }

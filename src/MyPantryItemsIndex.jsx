@@ -1,7 +1,7 @@
 export function MyPantryItemsIndex(props) {
   return (
     <div>
-      <h1>My Pantry!</h1>
+      <h2>My Pantry!</h2>
       {props.myPantryItems.map((myPantryItem) => (
         <div key={myPantryItem.id}>
           <h2>{myPantryItem.name}</h2>

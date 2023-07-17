@@ -8,7 +8,6 @@ if (jwt) {
 
 export function Login() {
   const [errors, setErrors] = useState([]);
-  const [status, setStatus] = useState(null);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -24,7 +23,6 @@ export function Login() {
         window.location.href = "/"; // Change this to hide a modal, redirect to a specific page, etc.
       })
       .catch((error) => {
-        setStatus(error.response.status);
         console.log(error.response);
         setErrors(["Invalid email or password"]);
       });
@@ -33,7 +31,7 @@ export function Login() {
   return (
     <div id="login">
       <h1>Login</h1>
-      {status ? <img src={`https://http.cat/${status}`} /> : null}
+
       <ul>
         {errors.map((error) => (
           <li key={error}>{error}</li>

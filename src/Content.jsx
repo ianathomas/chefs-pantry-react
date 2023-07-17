@@ -2,10 +2,13 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { IngredientsIndex } from "./IngredientsIndex";
 import { MyPantryItemsIndex } from "./MyPantryItemsIndex";
+import { Routes, Route } from "react-router-dom";
+import { Signup } from "./Signup";
+import { Login } from "./Login";
 
 export function Content() {
-  const [ingredients, setIngredients] = useState([]);
   const [myPantryItems, setMyPantryItems] = useState([]);
+  const [ingredients, setIngredients] = useState([]);
   const [searchTerm, setSearchTerm] = useState([]);
 
   const handleIndexIngredients = () => {
@@ -26,17 +29,25 @@ export function Content() {
 
   // useEffect(handleIndexIngredients, []);
 
-  useEffect(handleIndexMyPantryItems, []);
+  useEffect(handleIndexMyPantryItems, [ingredients]);
 
   return (
-    <div>
-      <div>
-        Search: <input type="text" value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} />
-        {searchTerm}
+    <div className="container">
+      <div className="search-container">
+        Search Ingredients:{" "}
+        <input type="text" value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} />
         <button onClick={handleIndexIngredients}>Search</button>
       </div>
-      <IngredientsIndex ingredients={ingredients} />
-      <MyPantryItemsIndex myPantryItems={myPantryItems} />
+      <Routes>
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        {/* <Route path="/ingredients" element={<IngredientsIndex ingredients={ingredients} />} /> */}
+        <Route
+          path="/"
+          element={<IngredientsIndex ingredients={ingredients} handleIndexMyPantryItems={handleIndexMyPantryItems} />}
+        />
+        <Route path="/my_pantry_items" element={<MyPantryItemsIndex myPantryItems={myPantryItems} />} />
+      </Routes>
     </div>
   );
 }
