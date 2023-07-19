@@ -63,7 +63,7 @@ button:hover, button:active {
   width: 50%;
   float: right;
   padding-top: 120px;
-  text-shadow: 5px 5px 5px grey;
+  text-shadow: 5px 5px 5px rgb(161, 161, 161);
 }
 /* .quote {
   text-align: right;

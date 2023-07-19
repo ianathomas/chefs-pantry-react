@@ -3,11 +3,7 @@ import { LogoutLink } from "./LogoutLink";
 
 export function Header() {
   return (
-    // <header>
-    //   <a href="#">Home</a> | <a href="#posts-index">All posts</a> | <a href="#posts-new">New post</a>
-    // </header>
-
-    // <nav className="navbar navbar-expand-lg bg-primary">
+    // This is the navbar, it contains links to the various different pages of the site
 
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
@@ -27,6 +23,11 @@ export function Header() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
+            {/* This part of the navbar has special functionality. 
+          This block of code checks to see if someone is logged in.
+          If someone is logged in, or once someone logs in, the "Signup" and "Login" buttons will dissappear.
+          This helps reassure the user that they are in fact, logged in */}
+
             {localStorage.jwt === undefined ? (
               <>
                 <li className="nav-item">

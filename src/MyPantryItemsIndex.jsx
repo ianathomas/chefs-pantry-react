@@ -23,13 +23,6 @@ export function MyPantryItemsIndex(props) {
           >
             Delete
           </button>
-          {/* <form onSubmit={destroyPantryItem}>
-            <input type="hidden" name="id" defaultValue={myPantryItem.id}></input>
-            <p>amount to delete</p> <input type="text" name="amount"></input>
-            <button type="submit">Delete from Pantry</button>
-          </form> */}
-          {/* <img src={myPantryItem.url} /> */}
-          {/* <p>Type: {myPantryItem.ingredient.ingredient_type}</p> */}
         </div>
       ))}
     </div>
