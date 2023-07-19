@@ -1,8 +1,8 @@
 # chefs-pantry-react
 React Frontend for "Chefs-Pantry" Capstone Project
 
-React
-Ruby
+React,
+Ruby,
 Spoonacular Api
 
 This is an app to you catalog and organize your kitchen as far as potential ingredients to cook with.
