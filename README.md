@@ -1,6 +1,8 @@
 # chefs-pantry-react
 React Frontend for "Chefs-Pantry" Capstone Project
 
+This works in tandem with the "chefs-pantry" repo thats located on this github
+
 React,
 Ruby,
 Spoonacular Api
