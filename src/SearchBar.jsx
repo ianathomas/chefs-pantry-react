@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { IngredientsIndex } from "./IngredientsIndex";
 
-export function SearchBar() {
+export function SearchBar(props) {
   const handleIndexIngredients = () => {};
 
   return (
@@ -10,7 +10,6 @@ export function SearchBar() {
       Search: <input type="text" value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} />
       {searchTerm}
       <button onClick={handleIndexIngredients}>Search</button>
-      <IngredientsIndex ingredients={ingredients} />
     </div>
   );
 }

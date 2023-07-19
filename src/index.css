@@ -54,3 +54,22 @@ button:hover, button:active {
   font-size: 125%;
   box-shadow: 5px 3px 5px lightblue;
 }
+
+.float-container {
+  padding: 20px;
+}
+
+.float-child1 {
+  width: 50%;
+  float: right;
+  padding-top: 120px;
+  text-shadow: 5px 5px 5px grey;
+}
+/* .quote {
+  text-align: right;
+  margin-right: 140px;
+  padding: 100px;
+  font-size: larger;
+  text-shadow: black;
+  box-shadow: #e3f2fd;
+} */
